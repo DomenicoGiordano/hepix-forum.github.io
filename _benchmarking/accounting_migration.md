@@ -1,0 +1,138 @@
+---
+title: Accounting procedures
+layout: page
+---
+
+# Accounting procedures
+{:.no_toc}
+
+##### Table of Contents:
+{:.no_toc}
+* auto-gen TOC:
+{:toc}
+
+
+The migration strategy for the accounting side is detailed by the Accounting TF in the document [4]. This strategy involves implementing software changes on the site side as well as  APEL, EGI portal, WAU sides. To streamline the process and minimize the number of changes, several strategic approaches have been discussed within the WLCG collaboration, in particular at the Lancaster Workshop. These approaches have been endorsed by the WLCG Management Board [1].
+
+To summarize, the transition from HS06 to HEPScore23 should be gradual and seamless. This will be achieved through the following measures:
+The HEPScore23 benchmark will use the same scale factor as HS06, which is fixed on a reference server.
+Sites are only expected to benchmark new resources with HEPScore23. Old servers do not need to be re-benchmarked for accounting purposes. This ensures that the installed capacity pledged by the sites will remain unchanged.
+Sites are free to re-benchmark their servers if they wish, but they are not required to submit this information to the accounting portal. However, they can still use the HEP Benchmark Suite to publish their results in the benchmark database, which is separate from the accounting infrastructure.
+
+How do these procedures reflect what is done in a given WLCG site?
+Below we describe how to calculate the benchmarking factor depending on site configuration and how the report would look like in accordance with the new specification.
+
+## Example1: Site with a different cluster per CPU model. 
+New resources won’t be mixed with old resources. 
+
+
+| Cluster | Model                    | Num | Num of logical threads | <td colspan=2> Score per node | <td colspan=2>  Total score         | Score for accounting |
+|---------|--------------------------|-----|------------------------|----------------|------|-------------|--------|----------------------|
+|         |                          |     |                        | HS06           | HS23 | HS06        | HS23   |                      |
+| Old     | 2x AMD EPYC 7702 64-core |  29 |                    256 |           2643 | 2546 |       76647 |  73834 |                76647 |
+| New     | 2x AMD EPYC 7742 64-Core | 188 |                    256 |           2917 | 2972 |      548396 | 558736 |               558736 |
+| Total   |                          |     |                        |                |      |             | 632570 |               635383 |
+
+
+
+Suppose the site has 2 separate clusters, each cluster consisting of servers with the same CPU model. Labels “Old” and “New” identify the clusters included in production before 1st of April 2023 (Old) or after 1st of April 2023 (New). The table below summarizes the HS06 and HS23 scores per node and for the total installation.
+
+Therefore, if the same benchmark would be used for both clusters, the site would provide 625043 HS06 or 632570 HEPScore23, but following the  agreement to translate the HS06 score of the old machines with 1:1 ratio, the final total score accounted for that site is 635383.
+
+For the accounting reporting the same input numbers and configuration translate into the following reported benchmarking factor
+
+| Cluster | Model                    | Num | Num of logical threads | <td colspan=2> Score per node | <td colspan=2>  Total score   | Score for accounting |
+|---------|--------------------------|-----|------------------------|----------------|------|-------------|--------|----------------------|
+|         |                          |     |                        | HS06           | HS23 | HS06        | HS23   |                      |
+| Old     | 2x AMD EPYC 7702 64-core |  29 |                    256 |           2643 | 2546 |       76647 |  73834 |                76647 |
+| New     | 2x AMD EPYC 7742 64-Core | 188 |                    256 |           2917 | 2972 |      548396 | 558736 |               558736 |
+| Total   |                          |     |                        |                |      |             | 632570 |               635383 |
+
+
+
+Since resources are not mixed  they are accessible through different CEs. In this case in accordance with the new accounting record specification the job accounting records will look like:
+
+For old resources
+
+
+```sh
+APEL-summary-job-message: v0.4
+Site: SOME-SITE
+SubmitHost: <old_cluster_ce>
+Month: 4
+Year: 2023
+GlobalUserName: <...>
+WallDuration: 47248
+CpuDuration: 46871
+Processors: 1
+NumberofJobs: 3
+InfrastructureType: grid
+EarliestStartTime: ...
+LatestEndTime: ...
+ServiceLevel: {hepspec: 10.32}
+```
+
+For new resources
+
+
+```sh
+APEL-summary-job-message: v0.4
+Site: SOME-SITE
+SubmitHost: <new_cluster_ce>
+Month: 4
+Year: 2023
+GlobalUserName: <...>
+WallDuration: 47248
+CpuDuration: 46871
+Processors: 1
+NumberofJobs: 3
+InfrastructureType: grid
+EarliestStartTime: ...
+LatestEndTime: ...
+ServiceLevel: {HEPscore23: 11.6}
+```
+
+If using the APEL client, HEPscore will be configurable locally in the new version of the client in its client.cfg file. Example of the spec_updater section shown below:
+
+site_name = MY-SITENAME
+manual_spec1 = <old_cluster_ce>, hepspec, 10.32
+manual_spec2 = <new_cluster_ce>, HEPscore23, 11.6
+
+
+
+## Example2
+
+A site with a single cluster mixing all CPU models. We take exactly the same set of HW as in the previous example, just resources are all mixed.
+Then first we need to calculate the contribution of both sets of resources in the overall capacity.
+Fraction of old resources:
+76647/635383=0.12
+Correspondingly , fraction of new resources is 0.88
+
+Benchmarking factor for the mixed cluster will be  10.32*0.12 + 11.6*0.88=11.45
+
+The accounting job record will look like:
+
+
+```sh
+APEL-summary-job-message: v0.4
+Site: SOME-SITE
+SubmitHost: <old_cluster_ce>
+Month: 4
+Year: 2023
+GlobalUserName: <...>
+WallDuration: 47248
+CpuDuration: 46871
+Processors: 1
+NumberofJobs: 3
+InfrastructureType: grid
+EarliestStartTime: ...
+LatestEndTime: ...
+ServiceLevel: {HEPscore23: 11.45}
+```
+
+Please, pay attention, that in case we have a cluster with mixed resources having part of them benchmarked with HEPscore23, we do report as if the whole cluster has been benchmarked with HEPscore23.
+
+If using the APEL client, HEPscore will be configurable locally in the new version of the client in its client.cfg file. Example of the spec_updater section shown below:
+
+site_name = MY-SITENAME
+manual_spec1 = <new_cluster_ce>, HEPscore23, 11.45
