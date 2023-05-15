@@ -35,8 +35,8 @@ The accounting migration procedure has been officially endorsed by the WLCG MB d
 #### Tables of HS23 results
    W.I.P.
 
-### HEP_SPEC06 (HS06)
+### Obsolete HEP_SPEC06 (HS06)
 
 
-* See the [legacy page of HS06](/benchmarking/how_to_run_hs06.html) 
+* See the [legacy page of HS06](/benchmarking/HS06.html) 
 
