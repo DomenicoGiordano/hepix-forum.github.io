@@ -69,3 +69,17 @@ To run the script, users can use the following command line.
 
 By default, the script will use the current directory to create a working directory where all necessary files will be stored, including container images, benchmark outputs, and temporary workload results. The working directory can be modified using the parameter -w target_folder .
 During the execution the script reports the stdout of the HEP Benchmark Suite. If the execution completes successfully, it will print at the end information such as
+
+```sh
+<date>, hepbenchmarksuite.hepbenchmarksuite:cleanup [INFO] Successfully completed all requested benchmarks
+=========================================================
+BENCHMARK RESULTS FOR <hostname>
+=========================================================
+Suite start: <start_date>
+Suite end:   <end_date>
+Machine CPU Model: <name>
+HEPscore Benchmark = <value>
+```sh
+
+Using the bash script ensures that the entire process is performed correctly, and it is recommended that users utilize it when installing and running HEPScore23.
+
