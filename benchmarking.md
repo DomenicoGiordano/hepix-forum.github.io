@@ -29,5 +29,5 @@ The accounting migration procedure has been officially endorsed by the WLCG MB d
 
 ### Obsolete HEP-SPEC06 (HS06)
 
-  * For instructions on how to run HS06, plase refer to the [legacy page of HS06](/benchmarking/HS06.html) 
+  * For instructions on how to run HS06, please refer to the [legacy page of HS06](/benchmarking/HS06.html) 
 
