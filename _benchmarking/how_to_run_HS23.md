@@ -74,7 +74,7 @@ Suite start: *start_date*<br>
 Suite end:   *end_date*<br>
 Machine CPU Model: *name*<br>
 HEPscore Benchmark = *value*<br>
-{% raw %}
+{% endraw %}
 
 Using the bash script ensures that the entire process is performed correctly, and it is recommended that users utilize it when installing and running HEPScore23.
 
