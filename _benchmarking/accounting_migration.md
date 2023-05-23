@@ -25,7 +25,7 @@ Below we describe how to calculate the benchmarking factor depending on site con
 ## Example1: Site with a different cluster per CPU model
 New resources won’t be mixed with old resources. 
 
-<div class="datatable-begin"></div>
+{:class="striped"}
 <table><tbody>
 <tr>
 <th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p><th colspan="1" ><p><span></span></p></th></th>
@@ -43,7 +43,6 @@ New resources won’t be mixed with old resources.
 <td colspan="1" rowspan="1"><p><span>Total</span></p></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p><span>632570</span></p></td><td colspan="1" rowspan="1"><p><span>635383</span></p></td>
 </tr>
 </tbody></table>
-<div class="datatable-end"></div>
 
 Suppose the site has 2 separate clusters, each cluster consisting of servers with the same CPU model. Labels “Old” and “New” identify the clusters included in production before 1st of April 2023 (Old) or after 1st of April 2023 (New). The table below summarizes the HS06 and HS23 scores per node and for the total installation.
 
@@ -51,7 +50,7 @@ Therefore, if the same benchmark would be used for both clusters, the site would
 
 For the accounting reporting the same input numbers and configuration translate into the following reported benchmarking factor
 
-{:class="display"}
+{:class="striped"}
 <table><tbody><tr>
 <th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" ><p><span>Model</span></p></th><th colspan="1" ><p><span>Num</span></p></th><th colspan="1" ><p><span>Num of logical threads</span></p></th><th colspan="2" rowspan="1"><p><span>Score per node</span></p></th><th colspan="1" ><p><span>Benchmarking factor <br>(score per 1 processor core)</span></p></th>
 </tr><tr>
