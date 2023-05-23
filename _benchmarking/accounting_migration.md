@@ -26,9 +26,9 @@ Below we describe how to calculate the benchmarking factor depending on site con
 New resources won’t be mixed with old resources. 
 
 {:class="striped"}
-| Cluster | Model                    | Num | Num of logical threads | Score per node | none |   Total score    | none    | Score for accounting |
+| Cluster | Model                    | Num | Num of logical threads | Score per node |  |   Total score    | none    | Score for accounting |
 |:-------:|:------------------------:|:---:|:----------------------:|:--------------:|:----:|:----------------:|:-------:|:----------------------:|
-|         |                          |     |                        | HS06           | HS23 | HS06        | HS23   |                      |
+|         |                          |     |                        | **HS06**       | **HS23** | **HS06**       | **HS23**   |                      |
 | Old     | 2x AMD EPYC 7702 64-core |  29 |                    256 |           2643 | 2546 |       76647 |  73834 |                76647 |
 | New     | 2x AMD EPYC 7742 64-Core | 188 |                    256 |           2917 | 2972 |      548396 | 558736 |               558736 |
 | Total   |                          |     |                        |                |      |             | 632570 |               635383 |
