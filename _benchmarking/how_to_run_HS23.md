@@ -65,8 +65,8 @@ By default, the script will use the current directory to create a working direct
 
 During the execution the script reports the stdout of the HEP Benchmark Suite. If the execution completes successfully, it will print at the end information such as
 
-```sh
-\<date\>, hepbenchmarksuite.hepbenchmarksuite:cleanup [INFO] Successfully completed all requested benchmarks<br>
+{% raw %}
+[INFO] Successfully completed all requested benchmarks<br>
 =========================================================<br>
 BENCHMARK RESULTS FOR \<hostname\><br>
 =========================================================<br>
@@ -74,7 +74,7 @@ Suite start: *start_date*<br>
 Suite end:   *end_date*<br>
 Machine CPU Model: *name*<br>
 HEPscore Benchmark = *value*<br>
-```
+{% raw %}
 
 Using the bash script ensures that the entire process is performed correctly, and it is recommended that users utilize it when installing and running HEPScore23.
 
