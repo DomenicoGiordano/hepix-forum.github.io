@@ -6,7 +6,7 @@ menu: HS23 scores
 
 
 <table>
-  {% for row in site.data.HS23scores %}
+  {% for row in site.data.HS23scores.csv %}
     {% if forloop.first %}
     <tr>
       {% for pair in row %}
