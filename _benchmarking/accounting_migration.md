@@ -1,6 +1,7 @@
 ---
 title: Accounting procedures
 layout: page
+menu: Accounting
 ---
 
 # Accounting procedures
