@@ -53,11 +53,15 @@ Therefore, if the same benchmark would be used for both clusters, the site would
 For the accounting reporting the same input numbers and configuration translate into the following reported benchmarking factor
 
 {:class="striped"}
-| Cluster | Model                    | Num | Num of logical threads | Score per node **HS06** | Score per node **HS23**  |   Total score  **HS06** | Total score  **HS23** |   Score for accounting |
-|---------|--------------------------|-----|------------------------|----------------|------|-------------|--------|----------------------|
-| Old     | 2x AMD EPYC 7702 64-core |  29 |                    256 |           2643 | 2546 |       76647 |  73834 |                76647 |
-| New     | 2x AMD EPYC 7742 64-Core | 188 |                    256 |           2917 | 2972 |      548396 | 558736 |               558736 |
-| Total   |                          |     |                        |                |      |             | 632570 |               635383 |
+<table><tbody><tr>
+<th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" ><p><span>Model</span></p></th><th colspan="1" ><p><span>Num</span></p></th><th colspan="1" ><p><span>Num of logical threads</span></p></th><th colspan="2" rowspan="1"><p><span>Score per node</span></p></th><th colspan="1" ><p><span>Benchmarking factor <br>(score per 1 processor core)</span></p></th>
+</tr><tr>
+<td colspan="1" ><p><span>Cluster</span></p></td><td colspan="1" ><p><span>Cluster</span></p></td><td colspan="1" ><p><span>Cluster</span></p></td><td colspan="1" rowspan="1"><p><span>HS06 </span></p></td><td colspan="1" rowspan="1"><p><span>HS23</span></p></td><td colspan="1" ><p><span>Cluster</span></p></td>
+</tr><tr>
+<td colspan="1" rowspan="1"><p><span>Old</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7702 64-core</span></p></td><td colspan="1" rowspan="1"><p><span>29</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2643</span></p></td><td colspan="1" rowspan="1"><p><span>2546</span></p></td><td colspan="1" rowspan="1"><p><span>2643/256=10.32</span></p></td>
+</tr><tr>
+<td colspan="1" rowspan="1"><p><span>New</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7742 64-Core</span></p></td><td colspan="1" rowspan="1"><p><span>188</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2917</span></p></td><td colspan="1" rowspan="1"><p><span>2972</span></p></td><td colspan="1" rowspan="1"><p><span>2972/256=11.6</span></p></td>
+</tr></tbody></table>
 
 
 
