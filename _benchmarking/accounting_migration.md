@@ -28,10 +28,10 @@ New resources won’t be mixed with old resources.
 {:class="striped"}
 <table><tbody>
 <tr>
-<th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p><th colspan="1" ><p><span></span></p></th></th>
+<th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" ><p><span>Model</span></p></th><th colspan="1" ><p><span>Num</span></p></th><th colspan="1" ><p><span>Num of logical threads</span></p></th><th colspan="2"><p><span>Score per node</span></p></th><th colspan="2" ><p><span>Total score</span></p></th><th colspan="1" ><p><span>Score for accounting</span></p></th>
 </tr>
 <tr>
-<th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" ><p><span>Model</span></p></th><th colspan="1" ><p><span>Num</span></p></th><th colspan="1" ><p><span>Num of logical threads</span></p></th><th colspan="2"><p><span>Score per node</span></p></th><th colspan="2" ><p><span>Total score</span></p></th><th colspan="1" ><p><span>Score for accounting</span></p></th>
+<th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p><th colspan="1" ><p><span></span></p></th></th>
 </tr>
 <tr>
 <td colspan="1" rowspan="1"><p><span>Old</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7702 64-core</span></p></td><td colspan="1" rowspan="1"><p><span>29</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2643</span></p></td><td colspan="1" rowspan="1"><p><span>2546</span></p></td><td colspan="1" rowspan="1"><p><span>76647</span></p></td><td colspan="1" rowspan="1"><p><span>73834</span></p></td><td colspan="1" rowspan="1"><p><span>76647</span></p></td>
@@ -54,7 +54,7 @@ For the accounting reporting the same input numbers and configuration translate 
 <table><tbody><tr>
 <th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" ><p><span>Model</span></p></th><th colspan="1" ><p><span>Num</span></p></th><th colspan="1" ><p><span>Num of logical threads</span></p></th><th colspan="2" rowspan="1"><p><span>Score per node</span></p></th><th colspan="1" ><p><span>Benchmarking factor <br>(score per 1 processor core)</span></p></th>
 </tr><tr>
-<th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p></th><th colspan="1" ><p><span>Cluster</span></p></th>
+<th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" ><p><span></span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p></th><th colspan="1" ><p><span></span></p></th>
 </tr><tr>
 <td colspan="1" rowspan="1"><p><span>Old</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7702 64-core</span></p></td><td colspan="1" rowspan="1"><p><span>29</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2643</span></p></td><td colspan="1" rowspan="1"><p><span>2546</span></p></td><td colspan="1" rowspan="1"><p><span>2643/256=10.32</span></p></td>
 </tr><tr>
