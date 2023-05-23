@@ -25,7 +25,7 @@ Below we describe how to calculate the benchmarking factor depending on site con
 ## Example1: Site with a different cluster per CPU model
 New resources won’t be mixed with old resources. 
 
-{:class="striped"}
+{:class="display"}
 
 <table><tbody>
 <tr>
@@ -52,7 +52,7 @@ Therefore, if the same benchmark would be used for both clusters, the site would
 
 For the accounting reporting the same input numbers and configuration translate into the following reported benchmarking factor
 
-{:class="striped"}
+{:class="display"}
 <table><tbody><tr>
 <th colspan="1" ><p><span>Cluster</span></p></th><th colspan="1" ><p><span>Model</span></p></th><th colspan="1" ><p><span>Num</span></p></th><th colspan="1" ><p><span>Num of logical threads</span></p></th><th colspan="2" rowspan="1"><p><span>Score per node</span></p></th><th colspan="1" ><p><span>Benchmarking factor <br>(score per 1 processor core)</span></p></th>
 </tr><tr>
