@@ -25,15 +25,7 @@ Below we describe how to calculate the benchmarking factor depending on site con
 ## Example1: Site with a different cluster per CPU model
 New resources won’t be mixed with old resources. 
 
-{:class="striped"}
-| Cluster | Model                    | Num | Num of logical threads | Score per node |  |   Total score    | none    | Score for accounting |
-|:-------:|:------------------------:|:---:|:----------------------:|:--------------:|:----:|:----------------:|:-------:|:----------------------:|
-| Span <td colspan=3>triple  <td colspan=9>double                            |
-|         |                          |     |                        | **HS06**       | **HS23** | **HS06**       | **HS23**   |                      |
-| Old     | 2x AMD EPYC 7702 64-core |  29 |                    256 |           2643 | 2546 |       76647 |  73834 |                76647 |
-| New     | 2x AMD EPYC 7742 64-Core | 188 |                    256 |           2917 | 2972 |      548396 | 558736 |               558736 |
-| Total   |                          |     |                        |                |      |             | 632570 |               635383 |
-
+<table><tbody><tr><td colspan="1" rowspan="2"><p><span>Cluster</span></p></td><td colspan="1" rowspan="2"><p><span>Model</span></p></td><td colspan="1" rowspan="2"><p><span>Num</span></p></td><td colspan="1" rowspan="2"><p><span>Num of logical threads</span></p></td><td colspan="2" rowspan="1"><p><span>Score per node</span></p></td><td colspan="2" rowspan="1"><p><span>Total score</span></p></td><td colspan="1" rowspan="2"><p><span>Score for accounting</span></p></td></tr><tr><td colspan="1" rowspan="1"><p><span>HS06 </span></p></td><td colspan="1" rowspan="1"><p><span>HS23</span></p></td><td colspan="1" rowspan="1"><p><span>HS06 </span></p></td><td colspan="1" rowspan="1"><p><span>HS23</span></p></td></tr><tr><td colspan="1" rowspan="1"><p><span>Old</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7702 64-core</span></p></td><td colspan="1" rowspan="1"><p><span>29</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2643</span></p></td><td colspan="1" rowspan="1"><p><span>2546</span></p></td><td colspan="1" rowspan="1"><p><span>76647</span></p></td><td colspan="1" rowspan="1"><p><span>73834</span></p></td><td colspan="1" rowspan="1"><p><span>76647</span></p></td></tr><tr><td colspan="1" rowspan="1"><p><span>New</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7742 64-Core</span></p></td><td colspan="1" rowspan="1"><p><span>188</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2917</span></p></td><td colspan="1" rowspan="1"><p><span>2972</span></p></td><td colspan="1" rowspan="1"><p><span>548396</span></p></td><td colspan="1" rowspan="1"><p><span>558736</span></p></td><td colspan="1" rowspan="1"><p><span>558736</span></p></td></tr><tr><td colspan="1" rowspan="1"><p><span>Total</span></p></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p><span>632570</span></p></td><td colspan="1" rowspan="1"><p><span>635383</span></p></td></tr></tbody></table>
 
 
 Suppose the site has 2 separate clusters, each cluster consisting of servers with the same CPU model. Labels “Old” and “New” identify the clusters included in production before 1st of April 2023 (Old) or after 1st of April 2023 (New). The table below summarizes the HS06 and HS23 scores per node and for the total installation.
@@ -43,9 +35,8 @@ Therefore, if the same benchmark would be used for both clusters, the site would
 For the accounting reporting the same input numbers and configuration translate into the following reported benchmarking factor
 
 {:class="striped"}
-| Cluster | Model                    | Num | Num of logical threads | <td colspan=2> Score per node | <td colspan=2>  Total score   | Score for accounting |
+| Cluster | Model                    | Num | Num of logical threads | Score per node **HS06** | Score per node **HS23**  |   Total score  **HS06** | Total score  **HS23** |   Score for accounting |
 |---------|--------------------------|-----|------------------------|----------------|------|-------------|--------|----------------------|
-|         |                          |     |                        | HS06           | HS23 | HS06        | HS23   |                      |
 | Old     | 2x AMD EPYC 7702 64-core |  29 |                    256 |           2643 | 2546 |       76647 |  73834 |                76647 |
 | New     | 2x AMD EPYC 7742 64-Core | 188 |                    256 |           2917 | 2972 |      548396 | 558736 |               558736 |
 | Total   |                          |     |                        |                |      |             | 632570 |               635383 |
