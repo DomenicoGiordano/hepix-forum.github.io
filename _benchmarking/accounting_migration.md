@@ -25,7 +25,24 @@ Below we describe how to calculate the benchmarking factor depending on site con
 ## Example1: Site with a different cluster per CPU model
 New resources won’t be mixed with old resources. 
 
-<table><tbody><tr><td colspan="1" rowspan="2"><p><span>Cluster</span></p></td><td colspan="1" rowspan="2"><p><span>Model</span></p></td><td colspan="1" rowspan="2"><p><span>Num</span></p></td><td colspan="1" rowspan="2"><p><span>Num of logical threads</span></p></td><td colspan="2" rowspan="1"><p><span>Score per node</span></p></td><td colspan="2" rowspan="1"><p><span>Total score</span></p></td><td colspan="1" rowspan="2"><p><span>Score for accounting</span></p></td></tr><tr><td colspan="1" rowspan="1"><p><span>HS06 </span></p></td><td colspan="1" rowspan="1"><p><span>HS23</span></p></td><td colspan="1" rowspan="1"><p><span>HS06 </span></p></td><td colspan="1" rowspan="1"><p><span>HS23</span></p></td></tr><tr><td colspan="1" rowspan="1"><p><span>Old</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7702 64-core</span></p></td><td colspan="1" rowspan="1"><p><span>29</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2643</span></p></td><td colspan="1" rowspan="1"><p><span>2546</span></p></td><td colspan="1" rowspan="1"><p><span>76647</span></p></td><td colspan="1" rowspan="1"><p><span>73834</span></p></td><td colspan="1" rowspan="1"><p><span>76647</span></p></td></tr><tr><td colspan="1" rowspan="1"><p><span>New</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7742 64-Core</span></p></td><td colspan="1" rowspan="1"><p><span>188</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2917</span></p></td><td colspan="1" rowspan="1"><p><span>2972</span></p></td><td colspan="1" rowspan="1"><p><span>548396</span></p></td><td colspan="1" rowspan="1"><p><span>558736</span></p></td><td colspan="1" rowspan="1"><p><span>558736</span></p></td></tr><tr><td colspan="1" rowspan="1"><p><span>Total</span></p></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p><span>632570</span></p></td><td colspan="1" rowspan="1"><p><span>635383</span></p></td></tr></tbody></table>
+{:class="striped"}
+
+<table><tbody>
+<tr>
+<th colspan="1" rowspan="2"><p><span>Cluster</span></p></th><th colspan="1" rowspan="2"><p><span>Model</span></p></th><th colspan="1" rowspan="2"><p><span>Num</span></p></th><th colspan="1" rowspan="2"><p><span>Num of logical threads</span></p></th><th colspan="2" rowspan="1"><p><span>Score per node</span></p></th><th colspan="2" rowspan="1"><p><span>Total score</span></p></th><th colspan="1" rowspan="2"><p><span>Score for accounting</span></p></th>
+</tr>
+<tr>
+<th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p></th><th colspan="1" rowspan="1"><p><span>HS06 </span></p></th><th colspan="1" rowspan="1"><p><span>HS23</span></p></th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><p><span>Old</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7702 64-core</span></p></td><td colspan="1" rowspan="1"><p><span>29</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2643</span></p></td><td colspan="1" rowspan="1"><p><span>2546</span></p></td><td colspan="1" rowspan="1"><p><span>76647</span></p></td><td colspan="1" rowspan="1"><p><span>73834</span></p></td><td colspan="1" rowspan="1"><p><span>76647</span></p></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><p><span>New</span></p></td><td colspan="1" rowspan="1"><p><span>2x AMD EPYC 7742 64-Core</span></p></td><td colspan="1" rowspan="1"><p><span>188</span></p></td><td colspan="1" rowspan="1"><p><span>256</span></p></td><td colspan="1" rowspan="1"><p><span>2917</span></p></td><td colspan="1" rowspan="1"><p><span>2972</span></p></td><td colspan="1" rowspan="1"><p><span>548396</span></p></td><td colspan="1" rowspan="1"><p><span>558736</span></p></td><td colspan="1" rowspan="1"><p><span>558736</span></p></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><p><span>Total</span></p></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p><span>632570</span></p></td><td colspan="1" rowspan="1"><p><span>635383</span></p></td>
+</tr></tbody></table>
 
 
 Suppose the site has 2 separate clusters, each cluster consisting of servers with the same CPU model. Labels “Old” and “New” identify the clusters included in production before 1st of April 2023 (Old) or after 1st of April 2023 (New). The table below summarizes the HS06 and HS23 scores per node and for the total installation.
