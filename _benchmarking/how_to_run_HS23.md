@@ -82,9 +82,10 @@ Using the bash script ensures that the entire process is performed correctly, an
 ### ulimit configuration on CENTOS7 (reason and procedure)
 A workload of the HEPScore23 benchmark uses a multi-service approach for the reconstruction and starts multiple processes per core that stay idle waiting for their turn of processing. For machines with more than 100 CPU cores, this translates into more than 4096 processes, which is the default for normal (non-root) users on CentOS7. Therefore, HEPScore23 should run as root, or the user should be able to start more processes. This can be set with ulimit on CentOS7 by adding the line
 
-*benchmark  soft nproc unlimited*
+```sh
+echo "benchmark  soft nproc unlimited" >> /etc/security/limits.d/20-nproc.conf 
+```
 
-in /etc/security/limits.d/20-nproc.conf 
 It is necessary to start a new shell session after that change before running HEPScore23.
 
 ### CVMFS (as image repository) configuration 
