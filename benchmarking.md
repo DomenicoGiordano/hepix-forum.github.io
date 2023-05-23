@@ -32,8 +32,9 @@ If assistance is needed, the support unit of HEPscore can be reached via [GGUS t
 
 ![image-title-here](/benchmarking/GGUS-Form.png){:class="img-responsive" : width="350"}
 
-#### Tables of HS23 results
-   W.I.P.
+#### Tables of HS23 scores
+
+The HEPScore23 scores for the benchmarked servers are reported in this [table](/benchmarking/scores_HS23.html)
 
 ### Obsolete HEP-SPEC06 (HS06)
 
