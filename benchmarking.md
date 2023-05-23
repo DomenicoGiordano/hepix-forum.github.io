@@ -10,10 +10,10 @@ redirect_from: /benchmarks/index.html
 ---
 
 # {{ page.title }}
-{:.no_toc}
+* auto-gen TOC:
+{:toc}
 
 {{ page.description }}
-{:toc}
 
 
 ### HEPScore23 (HS23)
