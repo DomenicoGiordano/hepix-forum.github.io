@@ -107,10 +107,11 @@ ServiceLevel: {HEPscore23: 11.6}
 
 If using the APEL client, HEPscore will be configurable locally in the new version of the client in its client.cfg file. Example of the spec_updater section shown below:
 
+```sh
 site_name = MY-SITENAME
 manual_spec1 = <old_cluster_ce>, hepspec, 10.32
 manual_spec2 = <new_cluster_ce>, HEPscore23, 11.6
-
+```
 
 
 ## Example2: A site with a single cluster mixing all CPU models
@@ -146,6 +147,7 @@ ServiceLevel: {HEPscore23: 11.45}
 Please, pay attention, that in case we have a cluster with mixed resources having part of them benchmarked with HEPscore23, we do report as if the whole cluster has been benchmarked with HEPscore23.
 
 If using the APEL client, HEPscore will be configurable locally in the new version of the client in its client.cfg file. Example of the spec_updater section shown below:
-
+```sh
 site_name = MY-SITENAME
 manual_spec1 = <new_cluster_ce>, HEPscore23, 11.45
+```
