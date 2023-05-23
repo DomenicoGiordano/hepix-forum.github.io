@@ -13,6 +13,7 @@ redirect_from: /benchmarks/index.html
 {:.no_toc}
 
 {{ page.description }}
+{:toc}
 
 
 ### HEPScore23 (HS23)
