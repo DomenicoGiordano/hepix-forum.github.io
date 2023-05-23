@@ -20,12 +20,13 @@ redirect_from: /benchmarks/index.html
 HEPScore23 is progressively replacing HS06 starting April 2023. 
 The accounting migration procedure has been officially endorsed by the WLCG MB during the [December 20th, 2022 meeting](https://wlcg-docs.web.cern.ch/boards/MB/Minutes/2022/MB-Minutes-20221220-2.pdf).  
 
-**Execution**:For instructions on how to run the HS23 benchmark, please refer to the [dedicated page](/benchmarking/how_to_run_HS23.html). 
+**Execution**: For instructions on how to run the HS23 benchmark, please refer to the [dedicated page](/benchmarking/how_to_run_HS23.html). 
 
 **Accounting**: For instructions on how to report HS23 and or HS06 in the Accounting system, please refer to the [dedicated page](/benchmarking/accounting_migration.html). 
 
 **Support Unit**: 
 If assistance is needed, the support unit of HEPscore can be reached via GGUS tickets. In that case the Responsible unit to be selected is Benchmarking. 
+![image-title-here](/benchmarking/GGUS-Form.png){:class="img-responsive"}
 
 #### Tables of HS23 results
    W.I.P.
