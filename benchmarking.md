@@ -10,6 +10,7 @@ redirect_from: /benchmarks/index.html
 ---
 
 # {{ page.title }}
+{:.no_toc}
 * auto-gen TOC:
 {:toc}
 
