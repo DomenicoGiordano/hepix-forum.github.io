@@ -6,24 +6,25 @@ layout: page
 # Accounting procedures
 {:.no_toc}
 
-##### Table of Contents:
 {:.no_toc}
 * auto-gen TOC:
 {:toc}
 
 
-The migration strategy for the accounting side is detailed by the Accounting TF in the document [4]. This strategy involves implementing software changes on the site side as well as  APEL, EGI portal, WAU sides. To streamline the process and minimize the number of changes, several strategic approaches have been discussed within the WLCG collaboration, in particular at the Lancaster Workshop. These approaches have been endorsed by the WLCG Management Board [1].
+The migration strategy for the accounting side is detailed by the Accounting TF in this [document](https://twiki.cern.ch/twiki/bin/view/LCG/ChangesForHEPscore). This strategy involves implementing software changes on the site side as well as  APEL, EGI portal, WAU sides. To streamline the process and minimize the number of changes, several strategic approaches have been discussed within the WLCG collaboration, in particular at the Lancaster Workshop. These approaches have been endorsed by the WLCG Management Board during the [December 20th, 2022 meeting](https://wlcg-docs.web.cern.ch/boards/MB/Minutes/2022/MB-Minutes-20221220-2.pdf).
 
 To summarize, the transition from HS06 to HEPScore23 should be gradual and seamless. This will be achieved through the following measures:
 The HEPScore23 benchmark will use the same scale factor as HS06, which is fixed on a reference server.
-Sites are only expected to benchmark new resources with HEPScore23. Old servers do not need to be re-benchmarked for accounting purposes. This ensures that the installed capacity pledged by the sites will remain unchanged.
-Sites are free to re-benchmark their servers if they wish, but they are not required to submit this information to the accounting portal. However, they can still use the HEP Benchmark Suite to publish their results in the benchmark database, which is separate from the accounting infrastructure.
+
+Sites are only expected to benchmark new resources with HEPScore23. Old servers do not need to be re-benchmarked for accounting purposes. 
+This ensures that the installed capacity pledged by the sites will remain unchanged.
+Sites are free to re-benchmark their servers if they wish, but they are not required to submit this information to the accounting portal. 
+However, they can still use the HEP Benchmark Suite to publish their results in the benchmark database, which is separate from the accounting infrastructure.
 
 How do these procedures reflect what is done in a given WLCG site?
 Below we describe how to calculate the benchmarking factor depending on site configuration and how the report would look like in accordance with the new specification.
 
-## Example1: Site with a different cluster per CPU model
-New resources won’t be mixed with old resources. 
+### Example1: Site with a different cluster per CPU model
 
 {:class="striped"}
 <table><tbody>
@@ -44,9 +45,12 @@ New resources won’t be mixed with old resources.
 </tr>
 </tbody></table>
 
+
+In this scenario new resources won’t be mixed with old resources. 
+
 Suppose the site has 2 separate clusters, each cluster consisting of servers with the same CPU model. Labels “Old” and “New” identify the clusters included in production before 1st of April 2023 (Old) or after 1st of April 2023 (New). The table below summarizes the HS06 and HS23 scores per node and for the total installation.
 
-Therefore, if the same benchmark would be used for both clusters, the site would provide 625043 HS06 or 632570 HEPScore23, but following the  agreement to translate the HS06 score of the old machines with 1:1 ratio, the final total score accounted for that site is 635383.
+Therefore, if the same benchmark would be used for both clusters, the site would provide 625043 HS06 or 632570 HEPScore23, but following the  agreement to translate the HS06 score of the old machines with 1:1 ratio, the final total score accounted for that site is **635383**.
 
 For the accounting reporting the same input numbers and configuration translate into the following reported benchmarking factor
 
@@ -114,12 +118,13 @@ manual_spec2 = <new_cluster_ce>, HEPscore23, 11.6
 ```
 
 
-## Example2: A site with a single cluster mixing all CPU models
+### Example2: A site with a single cluster mixing all CPU models
 
 We take exactly the same set of HW as in the previous example, just resources are all mixed.
 Then first we need to calculate the contribution of both sets of resources in the overall capacity.
 Fraction of old resources:
 76647/635383=0.12
+
 Correspondingly , fraction of new resources is 0.88
 
 Benchmarking factor for the mixed cluster will be  10.32\*0.12 + 11.6\*0.88=11.45
