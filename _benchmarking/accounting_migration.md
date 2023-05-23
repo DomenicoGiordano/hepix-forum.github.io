@@ -22,10 +22,10 @@ Sites are free to re-benchmark their servers if they wish, but they are not requ
 How do these procedures reflect what is done in a given WLCG site?
 Below we describe how to calculate the benchmarking factor depending on site configuration and how the report would look like in accordance with the new specification.
 
-## Example1: Site with a different cluster per CPU model. 
+## Example1: Site with a different cluster per CPU model
 New resources won’t be mixed with old resources. 
 
-
+{:class="striped"}
 | Cluster | Model                    | Num | Num of logical threads | Score per node | none |   Total score    | none    | Score for accounting |
 |:-------:|:------------------------:|:---:|:----------------------:|:--------------:|:----:|:----------------:|:-------:|:----------------------:|
 |         |                          |     |                        | HS06           | HS23 | HS06        | HS23   |                      |
@@ -41,6 +41,7 @@ Therefore, if the same benchmark would be used for both clusters, the site would
 
 For the accounting reporting the same input numbers and configuration translate into the following reported benchmarking factor
 
+{:class="striped"}
 | Cluster | Model                    | Num | Num of logical threads | <td colspan=2> Score per node | <td colspan=2>  Total score   | Score for accounting |
 |---------|--------------------------|-----|------------------------|----------------|------|-------------|--------|----------------------|
 |         |                          |     |                        | HS06           | HS23 | HS06        | HS23   |                      |
@@ -100,9 +101,9 @@ manual_spec2 = <new_cluster_ce>, HEPscore23, 11.6
 
 
 
-## Example2
+## Example2: A site with a single cluster mixing all CPU models
 
-A site with a single cluster mixing all CPU models. We take exactly the same set of HW as in the previous example, just resources are all mixed.
+We take exactly the same set of HW as in the previous example, just resources are all mixed.
 Then first we need to calculate the contribution of both sets of resources in the overall capacity.
 Fraction of old resources:
 76647/635383=0.12
