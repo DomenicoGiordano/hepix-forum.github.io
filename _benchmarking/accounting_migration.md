@@ -122,7 +122,7 @@ Fraction of old resources:
 76647/635383=0.12
 Correspondingly , fraction of new resources is 0.88
 
-Benchmarking factor for the mixed cluster will be  10.32*0.12 + 11.6*0.88=11.45
+Benchmarking factor for the mixed cluster will be  10.32\*0.12 + 11.6\*0.88=11.45
 
 The accounting job record will look like:
 
