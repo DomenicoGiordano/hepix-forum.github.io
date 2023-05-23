@@ -26,7 +26,7 @@ The accounting migration procedure has been officially endorsed by the WLCG MB d
 
 **Support Unit**: 
 If assistance is needed, the support unit of HEPscore can be reached via GGUS tickets. In that case the Responsible unit to be selected is Benchmarking. 
-![image-title-here](/benchmarking/GGUS-Form.png){:class="img-responsive"}
+![image-title-here](/benchmarking/GGUS-Form.png){:class="img-responsive" : width="250"}
 
 #### Tables of HS23 results
    W.I.P.
