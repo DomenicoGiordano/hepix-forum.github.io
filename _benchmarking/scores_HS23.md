@@ -36,3 +36,6 @@ DataTables: true
 </tbody>
 </table>
 
+<script>
+$('table.display').DataTable()
+</script>
