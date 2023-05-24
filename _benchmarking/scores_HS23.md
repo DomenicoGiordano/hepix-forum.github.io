@@ -6,7 +6,7 @@ datatable: true
 
  {% assign table_rows = site.data.HS23scores %}
 
-  <table id="datatable" class="display">
+  <table id="myTable" class="display">
       {% for row in table_rows %}
           {% if forloop.first %}
               <thead>
