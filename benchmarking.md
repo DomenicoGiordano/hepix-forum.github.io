@@ -9,10 +9,6 @@ description: |
 redirect_from: /benchmarks/index.html
 ---
 
-# {{ page.title }}
-{:.no_toc}
-* auto-gen TOC:
-{:toc}
 
 {{ page.description }}
 
@@ -30,7 +26,7 @@ The accounting migration procedure has been officially endorsed by the WLCG MB d
 If assistance is needed, the support unit of HEPscore can be reached via [GGUS tickets](https://ggus.eu/?mode=ticket_submit). In that case the *Type of Issue* and the *Support Unit* to be selected is Benchmarking, as in the screenshot here:
 
 
-![image-title-here](/benchmarking/GGUS-Form.png){:class="img-responsive" : width="350"}
+![image-title-here](/benchmarking/GGUS-Form.png)
 
 #### Tables of HS23 scores
 
