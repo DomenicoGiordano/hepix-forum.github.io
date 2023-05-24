@@ -2,6 +2,7 @@
 title: EPScore23 Benchmark score
 layout: page
 menu: HS23 scores
+datatable: true
 ---
 
  {% assign table_rows = site.data.HS23scores %}
