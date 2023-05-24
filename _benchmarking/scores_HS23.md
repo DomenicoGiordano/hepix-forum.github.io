@@ -18,7 +18,7 @@ datatable: true
                   {% endfor %}
               </tr>
               </thead>
-          {% endif %}]
+          {% endif %}
           {% tablerow pair in row %}
               {{ pair[1] }}
           {% endtablerow %}
