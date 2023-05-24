@@ -1,42 +1,38 @@
 ---
-title: EPScore23 Benchmark score
-layout: page
-menu: HS23 scores
+title: "Test Table"
 datatable: true
 ---
 
- {% assign table_rows = site.data.HS23scores %}
-
-<br>
-table
-
-  <table class="display">
-      {% for row in table_rows %}
-          {% if forloop.first %}
-              <thead>
-              <tr>
-                  {% for pair in row %}
-                      <th>
-                          {{ pair[0] }}
-                      </th>
-                  {% endfor %}
-              </tr>
-              </thead>
-          {% endif %}
-
-          {% tablerow pair in row %}
-              {{ pair[1] }}
-          {% endtablerow %}
-      {% endfor %}
-  </table>
+# Mark Down
 
 <div class="datatable-begin"></div>
 
-Food    | Description                           | Category | Sample type
-------- | ------------------------------------- | -------- | -----------
-Apples  | A small, somewhat round ...           | Fruit    | Fuji
-Bananas | A long and curved, often-yellow ...   | Fruit    | Snow
-Kiwis   | A small, hairy-skinned sweet ...      | Fruit    | Golden
-Oranges | A spherical, orange-colored sweet ... | Fruit    | Navel
+| time| sig1A|
+|----:|-----:|
+|    1|     3|
+|    2|     4|
 
 <div class="datatable-end"></div>
+
+
+# HTML
+
+<table class="display">
+ <thead>
+  <tr>
+   <th style="text-align:right;"> time </th>
+   <th style="text-align:right;"> sig1A </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+</tbody>
+</table>
+
