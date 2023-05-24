@@ -9,7 +9,7 @@ menu: HS23 scores
     {% if forloop.first %}
     <tr>
       {% for pair in row %}
-        <th>{{ pair[0] }}</th>
+        <th>{{ pair[1] }}</th>
       {% endfor %}
     </tr>
     {% endif %}
