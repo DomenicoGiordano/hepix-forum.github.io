@@ -35,7 +35,3 @@ datatable: true
   </tr>
 </tbody>
 </table>
-
-<script>
-$('table.display').DataTable()
-</script>
