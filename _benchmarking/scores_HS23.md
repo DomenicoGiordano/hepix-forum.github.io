@@ -1,6 +1,6 @@
 ---
 title: "Test Table"
-DataTables: true
+datatable: true
 ---
 
 # Mark Down
