@@ -7,12 +7,12 @@ menu: HS23 scores
  {% assign table_rows = site.data.HS23scores %}
 
 <br>
+table
 
-<div id="my-table" class="datatable-begin">
-
-  <table>
+  <table class="display">
       {% for row in table_rows %}
           {% if forloop.first %}
+              <thead>
               <tr>
                   {% for pair in row %}
                       <th>
@@ -20,6 +20,7 @@ menu: HS23 scores
                       </th>
                   {% endfor %}
               </tr>
+              </thead>
           {% endif %}
 
           {% tablerow pair in row %}
@@ -28,4 +29,3 @@ menu: HS23 scores
       {% endfor %}
   </table>
 
-<div class="datatable-end"></div>
