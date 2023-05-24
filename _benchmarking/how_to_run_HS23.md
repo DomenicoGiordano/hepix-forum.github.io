@@ -1,7 +1,7 @@
 ---
 title: How to Run HEPScore23 Benchmark
 layout: page
-menu: How to run HEPScore23
+menu: How to run HS23
 ---
 
 # How to Run HEPScore23 Benchmark
