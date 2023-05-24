@@ -1,6 +1,7 @@
 ---
 title: "Test Table"
 layout: page
+menu: HS23 score table
 datatable: true
 ---
 
