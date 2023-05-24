@@ -6,7 +6,7 @@ datatable: true
 
  {% assign table_rows = site.data.HS23scores %}
 
-  <table class="striped">
+  <table class="responsive-table">
       {% for row in table_rows %}
           {% if forloop.first %}
               <thead>
