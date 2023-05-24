@@ -1,5 +1,6 @@
 ---
 title: "Test Table"
+layout: page
 datatable: true
 ---
 
