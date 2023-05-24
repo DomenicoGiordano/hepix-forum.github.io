@@ -4,7 +4,14 @@ layout: page
 menu: HS23 scores
 ---
 
-{% assign row = site.data.HS23scores[0] %}
-{% for pair in row %}
-  {{ pair | inspect }}
-{% endfor %}
+<table>
+  {% for row in site.data.HS23scores %}
+    {% if forloop.first %}
+    <tr>
+      {% for pair in row %}
+        <th>{{ pair[0] }}</th>
+      {% endfor %}
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
