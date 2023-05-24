@@ -13,5 +13,9 @@ menu: HS23 scores
       {% endfor %}
     </tr>
     {% endif %}
+
+    {% tablerow pair in row %}
+      {{ pair[1] }}
+    {% endtablerow %}
   {% endfor %}
 </table>
