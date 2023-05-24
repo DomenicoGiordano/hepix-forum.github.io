@@ -4,16 +4,22 @@ layout: page
 menu: HS23 scores
 ---
 
-<table>
-  {% for row in site.data.HS23scores %}
-    {% if forloop.first %}
-    <tr>
-      {% for pair in row %}
-        <th>{{ pair[1] }}</th>
+ {% assign table_rows = site.data.HS23scores %}
+
+  <table>
+      {% for row in table_rows %}
+          {% if forloop.first %}
+              <tr>
+                  {% for pair in row %}
+                      <th>
+                          {{ pair[0] }}
+                      </th>
+                  {% endfor %}
+              </tr>
+          {% endif %}
+
+          {% tablerow pair in row %}
+              {{ pair[1] }}
+          {% endtablerow %}
       {% endfor %}
-    </tr>
-    {% endif %}
-
-
-  {% endfor %}
-</table>
+  </table>
